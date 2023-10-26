@@ -7,6 +7,7 @@ namespace pixelBooru.Models
         public DateTime DateCreation { get; set; }
         public string UserDescription { get; set; }
         public string Password { get; set; }
+        public string Email { get; set; }
 
     }
 }
