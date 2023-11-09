@@ -1,8 +1,16 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using pixelBooru.Models;
 
-public class Class1
+namespace pixelBooru.Controllers
 {
-	public ArtistController()
-	{
-	}
+    public class ArtistController : Controller
+    {
+        public IActionResult Index()
+        {
+            return View();
+
+        }
+
+
+    }
 }
