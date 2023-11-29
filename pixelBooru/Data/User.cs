@@ -1,6 +1,11 @@
-﻿namespace pixelBooru.Data
+﻿using System;
+using Microsoft.AspNetCore.Identity;
+
+namespace pixelBooru.Data
 {
-    public class Class
+    public class User : IdentityUser
     {
+        public string? Firstname { get; set; }
+        public string? Lastname { get; set; }
     }
 }
