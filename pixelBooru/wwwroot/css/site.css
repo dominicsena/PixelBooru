@@ -14,6 +14,7 @@ html {
 }
 
 body {
+<<<<<<< HEAD
 
     margin-bottom: auto;
     margin: 0;
@@ -142,3 +143,7 @@ header{
     .container-artwork img {
         width: 100%;
     }
+=======
+  margin-bottom: 60px;
+}
+>>>>>>> parent of 2490194 (sample frontend)
