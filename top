@@ -1,0 +1,186 @@
+[33mcommit 9f58cb9fdaf793f22c16f2639ff3c26891e6bc3d[m[33m ([m[1;36mHEAD -> [m[1;32mJP2[m[33m)[m
+Author: LK <iamnotleafa@gmail.com>
+Date:   Wed Nov 29 15:51:39 2023 +0800
+
+    Edited Files
+
+[33mcommit 0adee45fdd14c8fc55ed6eeeaaf3a59e571c71b2[m
+Author: LK <iamnotleafa@gmail.com>
+Date:   Wed Nov 29 15:41:33 2023 +0800
+
+    Added Data and ViewModels folders, moved viewmodel
+
+[33mcommit 6172c3752e2c6c76de9ba24413d76d7a1bfaa7f0[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Merge: b3b8aac 62a9be0
+Author: Dom <118805100+dominicsena@users.noreply.github.com>
+Date:   Wed Nov 29 09:28:05 2023 +0800
+
+    Merge branch 'master' of https://github.com/dominicsena/pixelBooru
+
+[33mcommit b3b8aaca06abeaeb3cf6754b4416e644fec4e94f[m
+Author: Dom <118805100+dominicsena@users.noreply.github.com>
+Date:   Wed Nov 29 09:26:25 2023 +0800
+
+    revert
+    
+    revert
+
+[33mcommit 62a9be0c7d94a0331f80e152e82f70f0b016fc64[m
+Author: Dom <118805100+dominicsena@users.noreply.github.com>
+Date:   Wed Nov 29 08:53:25 2023 +0800
+
+    Update pixelBooru.csproj
+
+[33mcommit 2c7caefd7d154dffe1f38732190382b0b10d0e2d[m
+Merge: a975d9f f76cfe5
+Author: Dom <118805100+dominicsena@users.noreply.github.com>
+Date:   Wed Nov 29 08:41:14 2023 +0800
+
+    Merge pull request #6 from dominicsena/Gian
+    
+    Gian
+
+[33mcommit f76cfe51473e06d8c21ceb233e8f1c05b57c1c7c[m[33m ([m[1;31morigin/Gian[m[33m)[m
+Merge: 3307b14 36eea60
+Author: SibuyasFuri <gianmarcus.alejandro.cics@ust.edu.ph>
+Date:   Wed Nov 29 08:09:53 2023 +0800
+
+    Pushed to Gian Branch
+
+[33mcommit 3307b1452e96863048d8d362601d79ec09c7c32a[m
+Author: SibuyasFuri <gianmarcus.alejandro.cics@ust.edu.ph>
+Date:   Wed Nov 29 08:08:49 2023 +0800
+
+    Pushed to Gian Branch
+
+[33mcommit a975d9f411be1847b45ee6122456ca4c0274de1f[m
+Merge: 346c459 36eea60
+Author: Dom <118805100+dominicsena@users.noreply.github.com>
+Date:   Tue Nov 28 23:47:25 2023 +0800
+
+    Merge pull request #5 from dominicsena/Gian
+    
+    Updated Artworks Page 28/11/23 (GIAN)
+
+[33mcommit 36eea6057b46d3fd550bab466804ab32902f1313[m
+Merge: f414634 346c459
+Author: Dom <118805100+dominicsena@users.noreply.github.com>
+Date:   Tue Nov 28 23:47:00 2023 +0800
+
+    Merge branch 'master' into Gian
+
+[33mcommit 346c4594622434ac867e2d9bd21f6763c2ee1fbc[m
+Author: Lloyd Tano <Lloyd Tano@DESKTOP-6JPKDDG>
+Date:   Mon Nov 27 06:23:03 2023 +0800
+
+    Created Controller and ViewModel for Register, Login and Logout.
+
+[33mcommit f414634a30ab6b5b1d39e3d237d0fe1f2592d7c9[m
+Author: SibuyasFuri <gianmarcus.alejandro.cics@ust.edu.ph>
+Date:   Sun Nov 26 01:27:27 2023 +0800
+
+    Updated Artworks Page
+
+[33mcommit 6cc55c64a80d6460668611f1188fa73d7134a2c1[m
+Merge: 1e5153b 2490194
+Author: SibuyasFuri <gianmarcus.alejandro.cics@ust.edu.ph>
+Date:   Sat Nov 25 22:24:00 2023 +0800
+
+    Merge branch 'master' of https://github.com/dominicsena/pixelBooru
+
+[33mcommit 2490194aac0b25bc91a4fdda062d457ecef8f36d[m
+Author: Dom <118805100+dominicsena@users.noreply.github.com>
+Date:   Thu Nov 23 06:15:59 2023 +0800
+
+    sample frontend
+
+[33mcommit 1e5153b1008485fd60558117eac55c7fd68d5fb1[m
+Merge: 1feb899 8e431d4
+Author: SibuyasFuri <gianmarcus.alejandro.cics@ust.edu.ph>
+Date:   Thu Nov 9 08:34:51 2023 +0800
+
+    new commit for updated
+
+[33mcommit 1feb899c1a1a3d8ef2ee3f9aa324cbe245d64d5f[m
+Author: SibuyasFuri <gianmarcus.alejandro.cics@ust.edu.ph>
+Date:   Thu Nov 9 08:33:23 2023 +0800
+
+    delete
+
+[33mcommit 8e431d4948c4c58402a204034a776f1a3673c871[m
+Author: Dom <118805100+dominicsena@users.noreply.github.com>
+Date:   Thu Nov 9 08:26:08 2023 +0800
+
+    UpdaTED NA GUMAGANA
+
+[33mcommit ccd82fba5765e509105d74b724d6839a62cbcad3[m[33m ([m[1;31morigin/Dom[m[33m)[m
+Merge: a91f141 cc55426
+Author: Dom <118805100+dominicsena@users.noreply.github.com>
+Date:   Thu Oct 26 09:17:34 2023 +0800
+
+    Merge pull request #4 from dominicsena/Gian
+    
+    merged
+
+[33mcommit cc554269f166aa3d07477a5c0cb2d9a51e19d5dd[m
+Merge: 3a9af1e a91f141
+Author: Dom <118805100+dominicsena@users.noreply.github.com>
+Date:   Thu Oct 26 09:16:24 2023 +0800
+
+    Merge pull request #3 from dominicsena/master
+    
+    4 commits behind master
+
+[33mcommit 3a9af1e980c4d1306772d7ed7a1eac8d4ca34d93[m
+Author: SibuyasFuri <gianmarcus.alejandro.cics@ust.edu.ph>
+Date:   Thu Oct 26 09:15:51 2023 +0800
+
+    Updated Model files
+
+[33mcommit a91f141eb463648e771edc06b50d2e482ce9fc5d[m
+Merge: 922ee8e fdbc4bf
+Author: Dom <118805100+dominicsena@users.noreply.github.com>
+Date:   Thu Oct 26 09:03:50 2023 +0800
+
+    Merge pull request #2 from dominicsena/Lloyd
+    
+    added controllers
+
+[33mcommit 922ee8ef9392131693070c6e11108c1a0542d452[m
+Merge: 3ad62f7 a0c6454
+Author: Dom <118805100+dominicsena@users.noreply.github.com>
+Date:   Thu Oct 26 09:01:27 2023 +0800
+
+    Merge pull request #1 from dominicsena/Ezrah
+    
+    hi
+
+[33mcommit fdbc4bfda4dd786582033a8b8bc0927817fcb520[m[33m ([m[1;31morigin/Lloyd[m[33m)[m
+Author: Lloyd Tano <lloydmartin.tano.cics.edu.ph>
+Date:   Thu Oct 26 09:00:18 2023 +0800
+
+    added controllers
+
+[33mcommit a0c64544708993c0e1dd210e46607ffe7a72c4e7[m[33m ([m[1;31morigin/Ezrah[m[33m)[m
+Author: zekechu27 <ezrahzechairah.sanagustin.cics@ust.edu.ph>
+Date:   Thu Oct 26 09:00:09 2023 +0800
+
+    hi
+
+[33mcommit 3ad62f7a932e8337da520e5942ba442259363eb4[m
+Author: SibuyasFuri <gianmarcus.alejandro.cics@ust.edu.ph>
+Date:   Thu Oct 26 08:50:34 2023 +0800
+
+    Added Model files
+
+[33mcommit fe8a287df65c9bc4f39c35f92b4558aef49fb82c[m
+Author: Dom <118805100+dominicsena@users.noreply.github.com>
+Date:   Thu Oct 26 08:26:21 2023 +0800
+
+    Add project files.
+
+[33mcommit cb6a4c465423e205eaeb7620b23fc2a351af7fea[m
+Author: Dom <118805100+dominicsena@users.noreply.github.com>
+Date:   Thu Oct 26 08:26:18 2023 +0800
+
+    Add .gitattributes and .gitignore.
