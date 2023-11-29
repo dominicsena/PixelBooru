@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 ﻿@{
     var imageDirectory = "wwwroot/testImages";
     var imageFiles = Directory.EnumerateFiles(imageDirectory, "*.*").Where(s => s.EndsWith(".jpg") || s.EndsWith(".png") || s.EndsWith(".gif") || s.EndsWith(".bmp") || s.EndsWith(".jpeg")).ToList();
@@ -35,27 +33,26 @@
     </div>
 
     <div class="grid" id="image-grid">
-        @foreach (var imagePath in currentPageResults)
+        @foreach (var ImageModel in Model)
         {
-            <script>console.log("Image Path:", @("/" + imagePath.Substring("wwwroot".Length)))</script>
-            try
-            {
-                <div class="grid-display-container">
+            <div class="grid-display-container">
+                <a href="@Url.Action("ImageView", "Artwork", new { imagePath = ImageModel.ImagePath, title = ImageModel.Title })">
                     <div class="image-container">
-                        <img src="~/testImages/@System.IO.Path.GetFileName(imagePath)" alt="Image" style="border-radius: 8px;"/>
+                        <img src="~/testImages/@System.IO.Path.GetFileName(ImageModel.ImagePath)" alt="Image" style="border-radius: 8px;" />
                     </div>
                     <div class="image-info">
-                        <div class="artwork-title-container">Title</div>
-                        <div class="artist-name-container">Artist Name</div>
+                        <div class="artwork-title-container">@ImageModel.Title</div>
+                        <div class="artist-name-container">@ImageModel.ArtistName</div>
                     </div>
-                </div>
-            } catch (Exception ex)
-            {
-                <p>Error loading image: @ex.Message</p>
-            }
-
+                </a>
+            </div>
         }
     </div>
+
+
+
+
+
 
     <div class="page-navigation">
         @if (page > 1)
@@ -92,55 +89,261 @@
             <span class="disabled">&raquo;</span>
         }
     </div>
-=======
-﻿<h1>aRTWORK</h1>
+    
+    ﻿<h1>ARTWORK</h1>
 
 
-<div class="container-artwork-vertical">
+    <div class="container-artwork-vertical">
 
-    <div class="artwork-gallery-all-main">
+        <div class="artwork-gallery-all-main">
 
-        <div class="container-artwork-main-gallery">
-            <div class="container-artwork">
-                <img src="https://konachan.net/sample/6860f528292cabbb1cf56bfc08111716/Konachan.com%20-%20366482%20sample.jpg" alt="picture" />
+            <div class="container-artwork-main-gallery">
+                <div class="container-artwork">
+                    <img src="https://konachan.net/sample/6860f528292cabbb1cf56bfc08111716/Konachan.com%20-%20366482%20sample.jpg" alt="picture" />
 
-            </div>
-
-        </div>
-        
-        <div class="container-artwork-main-gallery">
-            <div class="container-artwork">
-                <img src="https://t4.ftcdn.net/jpg/04/70/29/97/240_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg" alt="picture" />
+                </div>
 
             </div>
 
-        </div>
+            <div class="container-artwork-main-gallery">
+                <div class="container-artwork">
+                    <img src="https://t4.ftcdn.net/jpg/04/70/29/97/240_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg" alt="picture" />
 
-        <div class="container-artwork-main-gallery">
-            <div class="container-artwork">
-                <img src="https://pbs.twimg.com/profile_images/1528460470717657088/_w_dr9Ll_400x400.jpg" alt="picture" />
-
-            </div>
-
-        </div>
-
-        
-        <div class="container-artwork-main-gallery">
-            <div class="container-artwork">
-                <img src="https://konachan.net/jpeg/cb516116390abe7ec4622b8a2728e70c/Konachan.com%20-%20366518%202girls%20dark_miku_%28project_voltage%29%20gloves%20hatsune_miku%20kokorori-p%20linoone%20meloetta%20pokemon%20project_voltage%20psychic_miku_%28project_voltage%29%20vocaloid.jpg" alt="picture" />
+                </div>
 
             </div>
 
-        </div>
+            <div class="container-artwork-main-gallery">
+                <div class="container-artwork">
+                    <img src="https://pbs.twimg.com/profile_images/1528460470717657088/_w_dr9Ll_400x400.jpg" alt="picture" />
 
-        
-        <div class="container-artwork-main-gallery">
-            <div class="container-artwork">
-                <img src="https://cdn.donmai.us/sample/62/85/__original_drawn_by_yadon_otaku__sample-6285ed88a4d154d2afd4fcd5cf91aa55.jpg"  alt="picture" />
+                </div>
 
             </div>
 
+
+            <div class="container-artwork-main-gallery">
+                <div class="container-artwork">
+                    <img src="https://konachan.net/jpeg/cb516116390abe7ec4622b8a2728e70c/Konachan.com%20-%20366518%202girls%20dark_miku_%28project_voltage%29%20gloves%20hatsune_miku%20kokorori-p%20linoone%20meloetta%20pokemon%20project_voltage%20psychic_miku_%28project_voltage%29%20vocaloid.jpg" alt="picture" />
+
+                </div>
+
+            </div>
+
+
+            <div class="container-artwork-main-gallery">
+                <div class="container-artwork">
+                    <img src="https://cdn.donmai.us/sample/62/85/__original_drawn_by_yadon_otaku__sample-6285ed88a4d154d2afd4fcd5cf91aa55.jpg" alt="picture" />
+
+                </div>
+
+            </div>
+
+
+
+
+
+
         </div>
+
+        <div class="artwork-gallery-all-main">
+
+            <div class="container-artwork-main-gallery">
+                <div class="container-artwork">
+                    <img src="https://cdn.donmai.us/sample/d6/10/__shinjou_akane_gridman_universe_and_1_more_drawn_by_sho_shoshos_8888__sample-d610f5e8365698ee88340e7a564d9ea6.jpg" alt="picture" />
+
+                </div>
+
+            </div>
+
+            <div class="container-artwork-main-gallery">
+                <div class="container-artwork">
+                    <img src="https://cdn.donmai.us/sample/0d/00/__sunny_omori_mari_mari_and_mari_omori_drawn_by_toastytoast__sample-0d007814d0189d75f7f2c2cdc388c071.jpg" alt="picture" />
+
+                </div>
+
+            </div>
+
+
+
+            <div class="container-artwork-main-gallery">
+                <div class="container-artwork">
+                    <img src="https://cdn.donmai.us/sample/17/c7/__wanda_maximoff_and_doctor_strange_marvel_and_2_more_drawn_by_poboong123__sample-17c7903eb68d8b4bf4c5e12d43cb74d8.jpg" alt="picture" />
+
+                </div>
+
+            </div>
+
+
+
+            <div class="container-artwork-main-gallery">
+                <div class="container-artwork">
+                    <img src="https://cdn.donmai.us/sample/36/32/__blade_honkai_and_1_more_drawn_by_fl_rion__sample-3632264c7746dcad9a0c2bb1ca6e2cbe.jpg" alt="picture" />
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+        <div class="artwork-gallery-all-main">
+
+            <div class="container-artwork-main-gallery">
+                <div class="container-artwork">
+                    <img src="https://cdn.donmai.us/sample/be/66/__virtuosa_arknights_drawn_by_weibo_2870467642__sample-be668a13680416f1d69962d18c1bde0f.jpg" alt="picture" />
+
+                </div>
+
+            </div>
+
+            <div class="container-artwork-main-gallery">
+                <div class="container-artwork">
+                    <img src="https://cdn.donmai.us/sample/0f/8d/__original_drawn_by_deadfishspy__sample-0f8d37506ceb2059ba1d6cb5d4b91a27.jpg" alt="picture" />
+
+                </div>
+
+            </div>
+
+            <div class="container-artwork-main-gallery">
+                <div class="container-artwork">
+                    <img src="https://cdn.donmai.us/original/fa/b7/__artoria_pendragon_and_saber_alter_fate_and_3_more_drawn_by_fov_ps__fab7832808a09361eef26a0a05ae5e2a.jpg" alt="picture" />
+
+                </div>
+
+            </div>
+
+
+            <div class="container-artwork-main-gallery">
+                <div class="container-artwork">
+                    <img src="https://cdn.donmai.us/sample/09/62/__tsuyuri_kanao_kimetsu_no_yaiba_drawn_by_gtsleep1200__sample-0962e559a11d571782788f3654114e81.jpg" alt="picture" />
+
+                </div>
+
+            </div>
+
+
+            <div class="container-artwork-main-gallery">
+                <div class="container-artwork">
+                    <img src="https://cdn.donmai.us/sample/82/b1/__celestia_ludenberg_danganronpa_and_1_more_drawn_by_kusatakesi__sample-82b1973b6adf839428cf3e51cdfbc3b6.jpg" alt="picture" />
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+        <div class="artwork-gallery-all-main">
+
+            <div class="container-artwork-main-gallery">
+                <div class="container-artwork">
+                    <img src="https://cdn.donmai.us/sample/0f/bb/__fudou_yuusei_and_bruno_yu_gi_oh_and_1_more_drawn_by_youko_shima__sample-0fbb693511ea4c6048f075b28d7475c2.jpg" alt="picture" />
+
+                </div>
+
+            </div>
+
+            <div class="container-artwork-main-gallery">
+                <div class="container-artwork">
+                    <img src="https://cdn.donmai.us/sample/7b/0b/__rowlet_cyndaquil_and_drizzile_pokemon_drawn_by_youko_shima__sample-7b0b5aa7092573caa0798ff3c837d092.jpg" alt="picture" />
+
+                </div>
+
+            </div>
+
+            <div class="container-artwork-main-gallery">
+                <div class="container-artwork">
+                    <img src="https://cdn.donmai.us/sample/ad/c0/__yuuka_blue_archive_drawn_by_azuki_az_my__sample-adc00e53ecce9f5d2ee9f81ce9f44d72.jpg" alt="picture" />
+
+                </div>
+
+            </div>
+
+
+            <div class="container-artwork-main-gallery">
+                <div class="container-artwork">
+                    <img src="https://cdn.donmai.us/sample/f0/61/__dr_ratio_honkai_and_1_more_drawn_by_alnyak__sample-f0611c69a2fe7984c8f1d26b24374eb6.jpg" alt="picture" />
+
+                </div>
+
+            </div>
+
+
+            <div class="container-artwork-main-gallery">
+                <div class="container-artwork">
+                    <img src="https://cdn.donmai.us/sample/b0/20/__pancake_nun_little_nuns_drawn_by_diva_hyxpk__sample-b02087aa25accab3b22eb9c897bc8ecd.jpg" alt="picture" />
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+        </div>
+        <div class="artwork-gallery-all-main">
+
+            <div class="container-artwork-main-gallery">
+                <div class="container-artwork">
+                    <img src="https://cdn.donmai.us/sample/aa/02/__shameimaru_aya_touhou_drawn_by_totoharu_kujirai_minato__sample-aa025d20d14c6cd3ab12a832e9defd69.jpg" alt="picture" />
+
+                </div>
+
+            </div>
+
+            <div class="container-artwork-main-gallery">
+                <div class="container-artwork">
+                    <img src="https://cdn.donmai.us/sample/83/fd/__furina_genshin_impact_drawn_by_beni_shake__sample-83fd8ca72ddbebb2d55c60222cc02fbb.jpg" alt="picture" />
+
+                </div>
+
+            </div>
+
+            <div class="container-artwork-main-gallery">
+                <div class="container-artwork">
+                    <img src="https://cdn.donmai.us/sample/0f/94/__yui_shousetsu_fate_and_1_more_drawn_by_mimulishizi__sample-0f94def15146600d2c8b32766bfd9066.jpg" alt="picture" />
+
+                </div>
+
+            </div>
+
+
+            <div class="container-artwork-main-gallery">
+                <div class="container-artwork">
+                    <img src="https://cdn.donmai.us/original/4f/3c/__inkling_and_inkling_girl_splatoon_drawn_by_inuowour__4f3cc328a2d8f25426b375aad5b3d64b.png" alt="picture" />
+
+                </div>
+
+            </div>
+
+
+            <div class="container-artwork-main-gallery">
+                <div class="container-artwork">
+                    <img src="https://cdn.donmai.us/original/96/37/__wario_mario__96370bfadfef68bfdc4ed822b4e3d6e2.png" alt="picture" />
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+
 
 
 
@@ -149,212 +352,3 @@
 
     </div>
 
-    <div class="artwork-gallery-all-main">
-
-        <div class="container-artwork-main-gallery">
-            <div class="container-artwork">
-                <img src="https://cdn.donmai.us/sample/d6/10/__shinjou_akane_gridman_universe_and_1_more_drawn_by_sho_shoshos_8888__sample-d610f5e8365698ee88340e7a564d9ea6.jpg" alt="picture" />
-
-            </div>
-
-        </div>
-
-        <div class="container-artwork-main-gallery">
-            <div class="container-artwork">
-                <img src="https://cdn.donmai.us/sample/0d/00/__sunny_omori_mari_mari_and_mari_omori_drawn_by_toastytoast__sample-0d007814d0189d75f7f2c2cdc388c071.jpg" alt="picture" />
-
-            </div>
-
-        </div>
-
-
-        
-        <div class="container-artwork-main-gallery">
-            <div class="container-artwork">
-                <img src="https://cdn.donmai.us/sample/17/c7/__wanda_maximoff_and_doctor_strange_marvel_and_2_more_drawn_by_poboong123__sample-17c7903eb68d8b4bf4c5e12d43cb74d8.jpg" alt="picture" />
-
-            </div>
-
-        </div>
-
-
-        
-        <div class="container-artwork-main-gallery">
-            <div class="container-artwork">
-                <img src="https://cdn.donmai.us/sample/36/32/__blade_honkai_and_1_more_drawn_by_fl_rion__sample-3632264c7746dcad9a0c2bb1ca6e2cbe.jpg" alt="picture" />
-
-            </div>
-
-        </div>
-
-
-
-
-
-
-    </div>
-
-    <div class="artwork-gallery-all-main">
-
-        <div class="container-artwork-main-gallery">
-            <div class="container-artwork">
-                <img src="https://cdn.donmai.us/sample/be/66/__virtuosa_arknights_drawn_by_weibo_2870467642__sample-be668a13680416f1d69962d18c1bde0f.jpg" alt="picture" />
-
-            </div>
-
-        </div>
-        
-        <div class="container-artwork-main-gallery">
-            <div class="container-artwork">
-                <img src="https://cdn.donmai.us/sample/0f/8d/__original_drawn_by_deadfishspy__sample-0f8d37506ceb2059ba1d6cb5d4b91a27.jpg" alt="picture" />
-
-            </div>
-
-        </div>
-
-        <div class="container-artwork-main-gallery">
-            <div class="container-artwork">
-                <img src="https://cdn.donmai.us/original/fa/b7/__artoria_pendragon_and_saber_alter_fate_and_3_more_drawn_by_fov_ps__fab7832808a09361eef26a0a05ae5e2a.jpg" alt="picture" />
-
-            </div>
-
-        </div>
-
-        
-        <div class="container-artwork-main-gallery">
-            <div class="container-artwork">
-                <img src="https://cdn.donmai.us/sample/09/62/__tsuyuri_kanao_kimetsu_no_yaiba_drawn_by_gtsleep1200__sample-0962e559a11d571782788f3654114e81.jpg" alt="picture" />
-
-            </div>
-
-        </div>
-
-        
-        <div class="container-artwork-main-gallery">
-            <div class="container-artwork">
-                <img src="https://cdn.donmai.us/sample/82/b1/__celestia_ludenberg_danganronpa_and_1_more_drawn_by_kusatakesi__sample-82b1973b6adf839428cf3e51cdfbc3b6.jpg" alt="picture" />
-
-            </div>
-
-        </div>
-
-
-
-
-
-
-    </div>
-
-    <div class="artwork-gallery-all-main">
-
-        <div class="container-artwork-main-gallery">
-            <div class="container-artwork">
-                <img src="https://cdn.donmai.us/sample/0f/bb/__fudou_yuusei_and_bruno_yu_gi_oh_and_1_more_drawn_by_youko_shima__sample-0fbb693511ea4c6048f075b28d7475c2.jpg" alt="picture" />
-
-            </div>
-
-        </div>
-
-        <div class="container-artwork-main-gallery">
-            <div class="container-artwork">
-                <img src="https://cdn.donmai.us/sample/7b/0b/__rowlet_cyndaquil_and_drizzile_pokemon_drawn_by_youko_shima__sample-7b0b5aa7092573caa0798ff3c837d092.jpg" alt="picture" />
-
-            </div>
-
-        </div>
-
-        <div class="container-artwork-main-gallery">
-            <div class="container-artwork">
-                <img src="https://cdn.donmai.us/sample/ad/c0/__yuuka_blue_archive_drawn_by_azuki_az_my__sample-adc00e53ecce9f5d2ee9f81ce9f44d72.jpg" alt="picture" />
-
-            </div>
-
-        </div>
-
-
-        <div class="container-artwork-main-gallery">
-            <div class="container-artwork">
-                <img src="https://cdn.donmai.us/sample/f0/61/__dr_ratio_honkai_and_1_more_drawn_by_alnyak__sample-f0611c69a2fe7984c8f1d26b24374eb6.jpg" alt="picture" />
-
-            </div>
-
-        </div>
-
-
-        <div class="container-artwork-main-gallery">
-            <div class="container-artwork">
-                <img src="https://cdn.donmai.us/sample/b0/20/__pancake_nun_little_nuns_drawn_by_diva_hyxpk__sample-b02087aa25accab3b22eb9c897bc8ecd.jpg" alt="picture" />
-
-            </div>
-
-        </div>
-
-
-
-
-
-
-    </div>
-    <div class="artwork-gallery-all-main">
-
-        <div class="container-artwork-main-gallery">
-            <div class="container-artwork">
-                <img src="https://cdn.donmai.us/sample/aa/02/__shameimaru_aya_touhou_drawn_by_totoharu_kujirai_minato__sample-aa025d20d14c6cd3ab12a832e9defd69.jpg" alt="picture" />
-
-            </div>
-
-        </div>
-
-        <div class="container-artwork-main-gallery">
-            <div class="container-artwork">
-                <img src="https://cdn.donmai.us/sample/83/fd/__furina_genshin_impact_drawn_by_beni_shake__sample-83fd8ca72ddbebb2d55c60222cc02fbb.jpg" alt="picture" />
-
-            </div>
-
-        </div>
-
-        <div class="container-artwork-main-gallery">
-            <div class="container-artwork">
-                <img src="https://cdn.donmai.us/sample/0f/94/__yui_shousetsu_fate_and_1_more_drawn_by_mimulishizi__sample-0f94def15146600d2c8b32766bfd9066.jpg" alt="picture" />
-
-            </div>
-
-        </div>
-
-
-        <div class="container-artwork-main-gallery">
-            <div class="container-artwork">
-                <img src="https://cdn.donmai.us/original/4f/3c/__inkling_and_inkling_girl_splatoon_drawn_by_inuowour__4f3cc328a2d8f25426b375aad5b3d64b.png" alt="picture" />
-
-            </div>
-
-        </div>
-
-
-        <div class="container-artwork-main-gallery">
-            <div class="container-artwork">
-                <img src="https://cdn.donmai.us/original/96/37/__wario_mario__96370bfadfef68bfdc4ed822b4e3d6e2.png" alt="picture" />
-
-            </div>
-
-        </div>
-
-
-
-
-
-
-    </div>
-
-
-
-
-
-
-
-
-</div>
-
-=======
-﻿<h1>Hello!! This is artwork index</h1>
->>>>>>> parent of 2490194 (sample frontend)

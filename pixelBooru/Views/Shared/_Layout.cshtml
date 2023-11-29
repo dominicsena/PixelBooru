@@ -7,20 +7,23 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/pixelBooru.styles.css" asp-append-version="true" />
+    <!-- Include Lightbox2 CSS and JS files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
 </head>
 <body>
     <header>
-<<<<<<< HEAD
 
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark" style="background-color: rgba(49, 49, 56, 0.5); border-bottom: 1px solid rgba(255,255,255,0.5);">
 =======
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
 
 =======
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
->>>>>>> parent of 2490194 (sample frontend)
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark mb-3">
+
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Index" asp-action="Index">pixelBooru</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">pixelBooru</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -28,10 +31,10 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Artist" asp-action="Index">Artist Index</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Artist" asp-action="Index">Artist Index</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Artwork" asp-action="Index">Artwork Index</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Artwork" asp-action="Index">Artwork Index</a>
                         </li>
                                 @if (User.Identity.IsAuthenticated)
                                 {
@@ -42,10 +45,10 @@
                                 else
                                 {
                                     <li class="nav-item">
-                                        <a class="nav-link text dark" asp-action="Login" asp-controller="Account">Login</a>
+                                        <a class="nav-link text light" asp-action="Login" asp-controller="Account">Login</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text dark" asp-action="Register" asp-controller="Account">Register</a>
+                                        <a class="nav-link text light" asp-action="Register" asp-controller="Account">Register</a>
                                     </li>
                                 }
                     </ul>

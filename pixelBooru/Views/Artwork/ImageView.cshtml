@@ -1,0 +1,59 @@
+﻿@page
+
+@model List<ImageModel>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <style>
+        /* Add your custom styles here */
+    </style>
+</head>
+<body>
+    <div class="grid" id="image-grid">
+        @foreach (var ImageModel in Model)
+        {
+            <div class="grid-display-container">
+                <div class="image-container">
+                    <img src="~/testImages/@System.IO.Path.GetFileName(ImageModel.ImagePath)" alt="Image" style="border-radius: 8px;" />
+                </div>
+                <div class="image-info">
+                    <div class="artwork-title-container">@ImageModel.Title</div>
+                    <div class="artist-name-container">@ImageModel.ArtistName</div>
+                </div>
+                <div class="Comment-container" id="Comment-@ImageModel.ImageId">
+                    <h3>Comment</h3>
+                    <!-- Display existing Comment here -->
+                    @foreach (var comment in ImageModel.Comment)
+                    {
+                        <p>@comment</p>
+                    }
+                    <!-- Form for user input -->
+                    <form onsubmit="addComment('@ImageModel.ImageId'); return false;">
+                        <input type="text" id="user-comment-@ImageModel.ImageId" placeholder="Add a comment">
+                        <button type="submit">Add Comment</button>
+                    </form>
+                </div>
+            </div>
+        }
+    </div>
+
+    <script>
+        function addComment(imageId) {
+            var userCommentInput = document.getElementById('user-comment-' + imageId);
+            var CommentContainer = document.getElementById('Comment-' + imageId);
+
+            // Append the new comment to the existing Comment
+            CommentContainer.innerHTML += '<p>' + userCommentInput.value + '</p>';
+
+            // Clear the input field
+            userCommentInput.value = '';
+        }
+    </script>
+
+    <!-- Include lightbox script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</body>
+</html>
