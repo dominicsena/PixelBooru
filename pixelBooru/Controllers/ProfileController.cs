@@ -1,15 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using pixelBooru.Models;
 
 namespace pixelBooru.Controllers
 {
-    public class ArtworkController : Controller
+    public class ProfileController : Controller
     {
-        public IActionResult Index() {
+        public IActionResult Index()
+        {
             return View();
-
         }
-
-
     }
 }
