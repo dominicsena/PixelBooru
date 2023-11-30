@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-
-﻿@{
+@{
     var imageDirectory = "wwwroot/testImages";
     var imageFiles = Directory.EnumerateFiles(imageDirectory, "*.*").Where(s => s.EndsWith(".jpg") || s.EndsWith(".png") || s.EndsWith(".gif") || s.EndsWith(".bmp") || s.EndsWith(".jpeg")).ToList();
     var numDirectoryImages = imageFiles.Count;
@@ -42,14 +40,15 @@
             {
                 <div class="grid-display-container">
                     <div class="image-container">
-                        <img src="~/testImages/@System.IO.Path.GetFileName(imagePath)" alt="Image" style="border-radius: 8px;"/>
+                        <img src="~/testImages/@System.IO.Path.GetFileName(imagePath)" alt="Image" style="border-radius: 8px;" />
                     </div>
                     <div class="image-info">
                         <div class="artwork-title-container">Title</div>
                         <div class="artist-name-container">Artist Name</div>
                     </div>
                 </div>
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 <p>Error loading image: @ex.Message</p>
             }
@@ -91,7 +90,7 @@
             <span class="disabled">&#8250;</span>
             <span class="disabled">&raquo;</span>
         }
-    </div> *@
+    </div>
 =======
 ﻿<h1>aRTWORK</h1>
 
